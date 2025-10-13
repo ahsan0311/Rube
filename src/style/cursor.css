@@ -1,0 +1,18 @@
+
+
+/* Default cursor ab hide nahi hoga */
+
+/* Custom cursor style */
+.custom-cursor {
+  position: fixed;
+  width: 30px;
+  height: 30px;
+  border: 4px solid #00a8f3; /* blue ring */
+  border-radius: 50%;
+  pointer-events: none;
+  transform: translate(-50%, -50%);
+  box-shadow: 0 0 20px rgba(0, 168, 243, 0.8);
+  transition: transform 0.1s ease-out;
+  z-index: 9999;
+}
+

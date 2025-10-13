@@ -1,0 +1,174 @@
+/* HowWeWork.css */
+.how-we-work {
+  padding: 100px 0;
+  background-color: #fff;
+  position: relative;
+}
+
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.how-we-work-header {
+  text-align: center;
+  margin-bottom: 80px;
+}
+
+.how-we-work-header h1 {
+  font-size: 48px;
+  font-weight: 700;
+  color: #002d72;
+  margin-bottom: 24px;
+}
+
+.process-content {
+  display: flex;
+  flex-direction: column;
+  gap: 70px;
+}
+
+.process-section {
+  position: relative;
+}
+
+.process-section h2 {
+  font-size: 32px;
+  font-weight: 700;
+  color: #002d72;
+  margin-bottom: 20px;
+  position: relative;
+  padding-left: 40px;
+}
+
+.process-section h2::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 30px;
+  height: 4px;
+  background-color: #0055ff;
+}
+
+.process-section p {
+  font-size: 18px;
+  line-height: 1.7;
+  color: #333;
+  padding-left: 40px;
+  border-left: 2px solid #eaeaea;
+  margin-left: 15px;
+}
+
+/* Add connecting line animation */
+.process-content::before {
+  content: "";
+  position: absolute;
+  left: 35px;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: linear-gradient(to bottom, #0055ff, #0055ff);
+  background-size: 100% 0%;
+  background-repeat: no-repeat;
+  z-index: 0;
+}
+
+/* Animation for the connecting line */
+.process-content.animate::before {
+  animation: fillLine 2s ease-out forwards;
+}
+
+@keyframes fillLine {
+  0% {
+    background-size: 100% 0%;
+  }
+  100% {
+    background-size: 100% 100%;
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 992px) {
+  .how-we-work {
+    padding: 80px 0;
+  }
+  
+  .how-we-work-header {
+    margin-bottom: 60px;
+  }
+  
+  .how-we-work-header h1 {
+    font-size: 40px;
+  }
+  
+  .process-section h2 {
+    font-size: 28px;
+  }
+  
+  .process-section p {
+    font-size: 17px;
+  }
+}
+
+@media (max-width: 768px) {
+  .how-we-work {
+    padding: 60px 0;
+  }
+  
+  .how-we-work-header {
+    margin-bottom: 50px;
+  }
+  
+  .how-we-work-header h1 {
+    font-size: 36px;
+  }
+  
+  .process-content {
+    gap: 50px;
+  }
+  
+  .process-section h2 {
+    font-size: 26px;
+    padding-left: 30px;
+  }
+  
+  .process-section h2::before {
+    width: 20px;
+  }
+  
+  .process-section p {
+    padding-left: 30px;
+    font-size: 16px;
+  }
+  
+  .process-content::before {
+    left: 25px;
+  }
+}
+
+@media (max-width: 576px) {
+  .container {
+    padding: 0 15px;
+  }
+  
+  .how-we-work-header h1 {
+    font-size: 32px;
+  }
+  
+  .process-section h2 {
+    font-size: 24px;
+    padding-left: 25px;
+  }
+  
+  .process-section p {
+    padding-left: 25px;
+    border-left-width: 1px;
+  }
+  
+  .process-content::before {
+    left: 20px;
+  }
+}
