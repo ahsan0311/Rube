@@ -40,7 +40,7 @@ const Footer = () => {
               <Link to="/about">About Us</Link>
             </li>
             <li>
-              <Link to="/jobs">Jobs</Link>
+              <Link to="/carriers">Carriers</Link>
             </li>
             <li>
               <Link to="/contact">Contact Us</Link>
@@ -74,19 +74,19 @@ const Footer = () => {
           </div>
 
           <div className="flex gap-3  max-[768px]:mb-[10px]">
-            <div className="w-10 h-10 bg-[#00AEEF] rounded-full flex items-center justify-center text-white text-lg hover:scale-105 cursor-pointer transition">
+            <div className="w-10 h-10 bg-blue-500 rounded-full flex items-center justify-center text-white text-lg hover:scale-105 cursor-pointer transition">
               <FaInstagram />
             </div>
-            <div className="w-10 h-10 bg-[#00AEEF] rounded-full flex items-center justify-center text-white text-lg hover:scale-105 cursor-pointer transition">
+            <div className="w-10 h-10 bg-blue-500 rounded-full flex items-center justify-center text-white text-lg hover:scale-105 cursor-pointer transition">
               <FaFacebookF />
             </div>
-            <div className="w-10 h-10 bg-[#00AEEF] rounded-full flex items-center justify-center text-white text-lg hover:scale-105 cursor-pointer transition">
+            <div className="w-10 h-10 bg-blue-500 rounded-full flex items-center justify-center text-white text-lg hover:scale-105 cursor-pointer transition">
               <FaLinkedinIn />
             </div>
-            <div className="w-10 h-10 bg-[#00AEEF] rounded-full flex items-center justify-center text-white text-lg hover:scale-105 cursor-pointer transition">
+            <div className="w-10 h-10 bg-blue-500 rounded-full flex items-center justify-center text-white text-lg hover:scale-105 cursor-pointer transition">
               <FaTwitter />
             </div>
-            <div className="w-10 h-10 bg-[#00AEEF] rounded-full flex items-center justify-center text-white text-lg hover:scale-105 cursor-pointer transition">
+            <div className="w-10 h-10 bg-blue-500 rounded-full flex items-center justify-center text-white text-lg hover:scale-105 cursor-pointer transition">
               <FaTiktok />
             </div>
           </div>

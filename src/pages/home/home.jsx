@@ -14,18 +14,10 @@ import {
 } from "react-icons/fa";
 import Card from "../../components/Card";
 import TextContent from "../../components/TextContent";
-import NoMoreSilos from "../../components/NoMoreSilos";
-import WhoWeBuildFor from "../../components/WhoWeBuildFor";
-import HowWeWork from "../../components/HowWeWork";
-import Contact from "../../components/Contact";
-import Footer from "../../components/Footer";
-import CoursesGrid from "../../components/CoursesGrid";
 import SocialValues from "../../components/SocialValues";
 import Testimonials from "../../components/Testimonials";
-import TutorialSection from "../../components/TutorialSection";
 import CoreValuesSection from "../../components/CoreValues";
-import CourseDetail from "../../components/CourseDetail";
-import BrochureBook from "../../components/BrochureBook";
+
 
 const Home = () => {
   const videoRef = useRef(null);
@@ -137,27 +129,9 @@ const Home = () => {
     },
   ];
 
-  const courseData = {
-    title: "Advanced Diploma In Information Technology (ADIT)",
-    description:
-      "It is a comprehensive course aimed at preparing students for their professional roles in the IT sector. It has two comprehensive modules. Each module lasts for six months.",
-    features: [
-      "Office Automation",
-      "Web Designing and Development",
-      "Adobe Visual Studio, HTML5, CSS3",
-      "JavaScript, React JS, JQuery",
-      "PHP with MySQL, CMS WordPress, Python",
-      "Freelance training for online earning",
-    ],
-  };
 
-  const brochureImages = [
-    "https://media.istockphoto.com/id/505061074/photo/stack-of-magazines.webp?b=1&s=612x612&w=0&k=20&c=IyvlGFpCY3R4XvCNNPfouXg2LsU8_OPK95de-rYwq7U=",
-    "https://media.istockphoto.com/id/505061074/photo/stack-of-magazines.webp?b=1&s=612x612&w=0&k=20&c=IyvlGFpCY3R4XvCNNPfouXg2LsU8_OPK95de-rYwq7U=",
-    "https://media.istockphoto.com/id/505061074/photo/stack-of-magazines.webp?b=1&s=612x612&w=0&k=20&c=IyvlGFpCY3R4XvCNNPfouXg2LsU8_OPK95de-rYwq7U=",
-    "https://media.istockphoto.com/id/505061074/photo/stack-of-magazines.webp?b=1&s=612x612&w=0&k=20&c=IyvlGFpCY3R4XvCNNPfouXg2LsU8_OPK95de-rYwq7U=",
 
-  ];
+
   return (
     <>
       <div className="relative min-h-screen overflow-hidden">
@@ -177,7 +151,7 @@ const Home = () => {
             />
           </video>
         </div>
-        <div className="absolute top-0 left-0 w-full h-1/2 bg-gradient-to-b from-black/70 to-transparent z-10"></div>
+        <div className="absolute top-0 left-0 w-full h-1/2 bg-gradient-to-b from-white/70 to-transparent z-10"></div>
         <div className="absolute bottom-[-40px] left-0 w-full h-[200px] z-10 pointer-events-none">
           <div className="w-full h-full bg-gradient-to-t from-white via-white/90 to-transparent"></div>
         </div>
@@ -205,24 +179,13 @@ const Home = () => {
       </div>
 
       <div className="max-w-7xl mx-auto mt-10 mb-10">
-        <CoursesGrid />
+        
         <CoreValuesSection />
         <SocialValues />
         <Testimonials />
       </div>
 
-      <div>
-      <BrochureBook images={brochureImages} />
-    </div>
-      <TutorialSection />
-
-       <div className="p-8">
-      <CourseDetail
-        title={courseData.title}
-        description={courseData.description}
-        features={courseData.features}
-      />
-    </div>
+     
     
     </>
   );

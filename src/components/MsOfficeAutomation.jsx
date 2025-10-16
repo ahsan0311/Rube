@@ -1,7 +1,6 @@
 // import React from "react";
 // import { FaRegFileAlt } from "react-icons/fa";
 
-
 // const MsOfficeAutomation = ({
 //   heading = "INQUIRY FORM",
 //   buttonText = "SEND MESSAGE",
@@ -116,18 +115,16 @@
 
 // export default MsOfficeAutomation;
 
-
-
 import React, { useState, useEffect, useRef } from "react";
 import { FaRegFileAlt, FaPlay, FaCheckCircle } from "react-icons/fa";
 
 const MsOfficeAutomation = ({
   heading = "INQUIRY FORM",
   buttonText = "SEND MESSAGE",
-  // Main logo image - can be shown or hidden
+
   showMainLogo = true,
   imageSrc = "https://computercollegiate.com.pk/wp-content/uploads/2025/05/page-2-03.png",
-  // Automation topics list
+
   automationTopics = [
     "Introduction to Windows 11",
     "Microsoft Word",
@@ -135,7 +132,7 @@ const MsOfficeAutomation = ({
     "Microsoft PowerPoint",
     "Internet",
   ],
-  // Icon images - flexible number and display
+
   showIcons = true,
   iconImages = [
     "https://rubycommercialcentre.com/images/windows.png",
@@ -143,12 +140,41 @@ const MsOfficeAutomation = ({
     "https://rubycommercialcentre.com/images/excel.png",
     "https://rubycommercialcentre.com/images/powerpoint.png",
   ],
-  // Additional props for customization
-  courseTitle = "MS OFFICE AUTOMATION",
-  mainHeading = "Master MS Office Automation",
-  subHeading = "Transform your productivity with our comprehensive MS Office Automation course.",
+
+  courseTitle = "MS OFFICE",
+  mainHeading = "Master MS Office",
+  subHeading = "Transform your productivity with our comprehensive MS Office course.",
   showVideoSection = true,
   showBenefitsTable = true,
+  videoUrl = "https://rubycommercialcentre.com/images/msoffice.mp4",
+  courseDetails = [
+    { label: "Duration", value: "3 Months" },
+    { label: "Project/Assignment", value: "Yes" },
+    { label: "Days", value: "Monday to Friday" },
+    { label: "Certificate", value: "Yes (Paid)" },
+  ],
+  benefitsData = [
+    {
+      title: "Beginner Friendly",
+      description:
+        "No prior experience required. Start from scratch and master MS Office.",
+    },
+    {
+      title: "Industry-Relevant Skills",
+      description:
+        "Learn practical skills that employers are looking for in today's job market.",
+    },
+    {
+      title: "Expert Instructors",
+      description:
+        "Learn from certified professionals with years of industry experience.",
+    },
+    {
+      title: "Career Advancement",
+      description:
+        "Boost your resume and open doors to better job opportunities.",
+    },
+  ],
 }) => {
   const [isVisible, setIsVisible] = useState(false);
   const sectionRef = useRef(null);
@@ -174,81 +200,69 @@ const MsOfficeAutomation = ({
     };
   }, []);
 
-  // Table data with appealing content
-  const tableData = [
-    {
-      title: "Beginner Friendly",
-      description: "No prior experience required. Start from scratch and master MS Office."
-    },
-    {
-      title: "Industry-Relevant Skills",
-      description: "Learn practical skills that employers are looking for in today's job market."
-    },
-    {
-      title: "Expert Instructors",
-      description: "Learn from certified professionals with years of industry experience."
-    },
-    {
-      title: "Career Advancement",
-      description: "Boost your resume and open doors to better job opportunities."
-    }
-  ];
-
   return (
-    <section 
-      ref={sectionRef}
-      className="py-16 px-4 sm:px-6 lg:px-8 "
-    >
+    <section ref={sectionRef} className="py-16 px-4 sm:px-6 lg:px-8 ">
       <div className="max-w-7xl mx-auto">
-        {/* Header Section */}
-        <div className={`text-center mb-12 transition-all duration-700 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-          <h1 className="text-4xl md:text-5xl font-bold text-gray-800 mb-4">
-            {mainHeading.split("MS Office")[0]}
-            <span className="text-blue-600">MS Office</span>
-            {mainHeading.split("MS Office")[1]}
+        <div
+          className={`text-center mb-12 transition-all duration-700 ${
+            isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
+          }`}
+        >
+          <h1 className="text-4xl md:text-5xl font-bold text-blue-500 mb-4">
+            {mainHeading}
           </h1>
+
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
             {subHeading}
           </p>
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-          
-          {/* LEFT SIDE - Course Information */}
-          <div className={`space-y-8 transition-all duration-700 delay-200 ${isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-10'}`}>
-            
-            {/* Course Logo and Title */}
+          <div
+            className={`space-y-8 transition-all duration-700 delay-200 ${
+              isVisible
+                ? "opacity-100 translate-x-0"
+                : "opacity-0 -translate-x-10"
+            }`}
+          >
             <div className=" rounded-2xl  p-6 flex flex-col md:flex-row items-start gap-6">
-              {/* Images Section - Conditionally rendered */}
-              {(showMainLogo || showIcons) && (
-                <div className="flex flex-col items-center">
-                  {/* Main Logo */}
+              {(showMainLogo || (showIcons && iconImages.length > 0)) && (
+                <div className="flex flex-col items-center justify-center">
                   {showMainLogo && (
                     <img
                       src={imageSrc}
-                      alt="Office Logo"
-                      className="w-40 mb-4"
+                      alt="Course Logo"
+                      className="w-40 mb-4 object-contain"
                     />
                   )}
-                  
-                  {/* Icons */}
+
                   {showIcons && iconImages.length > 0 && (
-                    <div className={`flex gap-4 ${iconImages.length > 4 ? 'flex-wrap justify-center' : ''}`}>
+                    <div
+                      className={`grid grid-cols-2 gap-4 justify-items-center items-center ${
+                        showMainLogo ? "mt-2" : ""
+                      }`}
+                    >
                       {iconImages.map((src, index) => (
-                        <img
+                        <div
                           key={index}
-                          src={src}
-                          alt={`Icon ${index + 1}`}
-                          className="w-12 h-12 transition-transform duration-300 hover:scale-110"
-                        />
+                          className="flex justify-center items-center w-14 h-14 bg-white rounded-lg shadow-sm hover:shadow-md border border-gray-100 transition-all duration-300"
+                        >
+                          <img
+                            src={src}
+                            alt={`Icon ${index + 1}`}
+                            className="w-10 h-10 object-contain"
+                          />
+                        </div>
                       ))}
                     </div>
                   )}
                 </div>
               )}
-              
-              <div className={`${showMainLogo || showIcons ? 'flex-1' : 'w-full'}`}>
-                <h2 className="text-2xl font-bold text-blue-600  px-4 py-2 inline-block rounded-lg mb-4">
+
+              <div
+                className={`${showMainLogo || showIcons ? "flex-1" : "w-full"}`}
+              >
+                <h2 className="text-2xl font-bold text-blue-600  px-4 py-2 inline-block rounded-lg ">
                   {courseTitle}
                 </h2>
 
@@ -267,19 +281,28 @@ const MsOfficeAutomation = ({
                 </button>
               </div>
             </div>
-            
-            {/* Benefits Table - Conditionally rendered */}
+
             {showBenefitsTable && (
-              <div className={` rounded-2xl  p-6 transition-all duration-700 delay-300 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-                <h3 className="text-2xl font-bold text-gray-800 mb-6 text-center">Why Choose Our Course?</h3>
-                
+              <div
+                className={` rounded-2xl  p-6 transition-all duration-700 delay-300 ${
+                  isVisible
+                    ? "opacity-100 translate-y-0"
+                    : "opacity-0 translate-y-10"
+                }`}
+              >
+                <h3 className="text-2xl font-bold text-gray-800 mb-6 text-center">
+                  Why Choose Our Course?
+                </h3>
+
                 <div className="space-y-4">
-                  {tableData.map((item, index) => (
-                    <div 
+                  {benefitsData.map((item, index) => (
+                    <div
                       key={index}
                       className="p-4 bg-gradient-to-r from-blue-50 to-indigo-50 rounded-lg border border-blue-100 transition-all duration-300 hover:shadow-md"
                     >
-                      <h4 className="font-bold text-blue-700 text-lg">{item.title}</h4>
+                      <h4 className="font-bold text-blue-700 text-lg">
+                        {item.title}
+                      </h4>
                       <p className="text-gray-600 mt-1">{item.description}</p>
                     </div>
                   ))}
@@ -288,54 +311,57 @@ const MsOfficeAutomation = ({
             )}
           </div>
 
-          {/* RIGHT SIDE - Form and Video */}
           <div className="space-y-8">
-            
-            {/* Video Section - Conditionally rendered */}
             {showVideoSection && (
-              <div className={` rounded-2xl  overflow-hidden transition-all duration-700 delay-400 ${isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-10'}`}>
-                <div className="relative bg-gradient-to-r from-blue-600 to-indigo-700 p-6 text-white">
+              <div
+                className={` rounded-2xl  overflow-hidden transition-all duration-700 delay-400 ${
+                  isVisible
+                    ? "opacity-100 translate-x-0"
+                    : "opacity-0 translate-x-10"
+                }`}
+              >
+                <div className="relative  p-6 text-blue-500">
                   <h3 className="text-2xl font-bold">Course Preview</h3>
-                  <p className="mt-2 opacity-90">See what you'll learn in our MS Office Automation course</p>
-                </div>
-                
-                <div className="p-6">
-                  <div className="relative bg-gray-800 rounded-lg aspect-video flex items-center justify-center">
-                    <div className="absolute inset-0 bg-gradient-to-r from-blue-900/30 to-indigo-900/30 flex items-center justify-center">
-                      <button className="bg-white/20 backdrop-blur-sm rounded-full p-4 hover:bg-white/30 transition-all duration-300 transform hover:scale-110">
-                        <FaPlay className="text-white text-2xl ml-1" />
-                      </button>
-                    </div>
-                    <div className="text-white text-center p-4">
-                      <p className="text-lg font-medium">Course Introduction Video</p>
-                      <p className="mt-2 opacity-80">Click to play</p>
-                    </div>
-                  </div>
-                  
-                  <div className="mt-6 grid grid-cols-2 gap-4">
-                    <div className="text-center p-3 bg-blue-50 rounded-lg">
-                      <p className="text-2xl font-bold text-blue-700">40+</p>
-                      <p className="text-gray-600 text-sm">Lessons</p>
-                    </div>
-                    <div className="text-center p-3 bg-green-50 rounded-lg">
-                      <p className="text-2xl font-bold text-green-700">12</p>
-                      <p className="text-gray-600 text-sm">Weeks</p>
-                    </div>
-                    <div className="text-center p-3 bg-purple-50 rounded-lg">
-                      <p className="text-2xl font-bold text-purple-700">100%</p>
-                      <p className="text-gray-600 text-sm">Practical</p>
-                    </div>
-                    <div className="text-center p-3 bg-orange-50 rounded-lg">
-                      <p className="text-2xl font-bold text-orange-700">24/7</p>
-                      <p className="text-gray-600 text-sm">Support</p>
-                    </div>
+                  <p className="mt-2 mb-4 opacity-90">
+                    See what you'll learn in our MS Office Automation course
+                  </p>
+                  <div className="relative rounded-lg overflow-hidden aspect-video">
+                    <iframe
+                      src={videoUrl}
+                      title="Course Preview"
+                      frameBorder="0"
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                      allowFullScreen
+                      className="w-full h-full"
+                    ></iframe>
                   </div>
                 </div>
               </div>
             )}
-            
-            {/* Form Section */}
-            <div className={` rounded-2xl  p-6 transition-all duration-700 delay-500 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+              {courseDetails.map((item, index) => (
+                <div
+                  key={index}
+                  className="bg-gradient-to-br from-blue-50 to-indigo-50 border border-blue-100 rounded-xl p-6 text-center shadow-sm hover:shadow-md transition-all duration-300"
+                >
+                  <h4 className="text-blue-700 font-semibold text-lg mb-1">
+                    {item.label}
+                  </h4>
+                  <p className="text-gray-700 font-medium">{item.value}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default MsOfficeAutomation;
+
+{
+  /* <div className={` rounded-2xl  p-6 transition-all duration-700 delay-500 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
               <h3 className="text-2xl font-bold text-center mb-2 text-gray-800">
                 {heading.split(" ")[0]}{" "}
                 <span className="text-blue-600">{heading.split(" ")[1]}</span>
@@ -380,12 +406,5 @@ const MsOfficeAutomation = ({
                   {buttonText}
                 </button>
               </form>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-  );
-};
-
-export default MsOfficeAutomation;
+            </div> */
+}

@@ -8,7 +8,6 @@ import ScrollToTop from "../components/ScrollToTop";
 const Home = React.lazy(() => import("../pages/home/home"));
 const About = React.lazy(() => import("../pages/about/about"));
 const Contact = React.lazy(() => import("../pages/contact/contact"));
-
 const MsOffice = React.lazy(() => import("../pages/courses/msOffice"));
 const Office_graphic = React.lazy(() => import("../pages/courses/office_graphic"));
 const Graphic = React.lazy(() => import("../pages/courses/graphic"));
@@ -21,6 +20,11 @@ const WordPress = React.lazy(() => import("../pages/courses/wordpress"));
 const VideoEditing = React.lazy(() => import("../pages/courses/videoEditing"));
 const ComputerTyping = React.lazy(() => import("../pages/courses/computerTyping"));
 const EnglishLanguage = React.lazy(() => import("../pages/courses/englishLanguage"));
+const Carriers = React.lazy(() => import("../pages/carriers/carriers"));
+const AutoCard = React.lazy(() => import("../pages/courses/autocad"));
+const ThreeDMax = React.lazy(() => import("../pages/courses/3dMax"));
+const Mern = React.lazy(() => import("../pages/courses/Mern"));
+
 
 
 const AppRoutes = () => {
@@ -41,6 +45,9 @@ const AppRoutes = () => {
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
         <Route path="/contact" element={<Contact />} />
+        <Route path="/carriers" element={<Carriers />} />
+
+
 
 
         {/* course */}
@@ -57,6 +64,9 @@ const AppRoutes = () => {
         <Route path="/video-editing" element={<VideoEditing />} />
         <Route path="/computer-typing" element={<ComputerTyping />} />
         <Route path="/english-language" element={<EnglishLanguage />} />
+        <Route path="/autocad" element={<AutoCard />} />
+        <Route path="/3d-max" element={<ThreeDMax />} />
+        <Route path="/mern-stack" element={<Mern />} />
 
 
 
