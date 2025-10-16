@@ -83,13 +83,13 @@ const Contact = () => {
   };
 
   return (
-    <div className="min-h-screen flex flex-col justify-center items-center px-4 py-10 bg-gradient-to-b from-blue-50 to-white">
+    <div className="min-h-screen flex flex-col justify-center items-center px-4 py-10  mt-15">
       <motion.form
         onSubmit={handleSubmit}
         initial={{ opacity: 0, y: 30 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8 }}
-        className="bg-white/90 backdrop-blur-lg border border-blue-100 shadow-2xl rounded-2xl p-8 w-full max-w-5xl"
+        className="bg-white/90 backdrop-blur-lg border border-blue-100 shadow-2xl rounded-2xl p-8 w-full max-w-7xl"
       >
         {/* Header */}
         <motion.div
