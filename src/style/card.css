@@ -39,7 +39,7 @@
   display: inline-flex;
   justify-content: center;
   align-items: center;
-   color: blue !important; 
+  color: #ff9704 !important; 
 }
 
 .name {
@@ -82,7 +82,7 @@
 
 /* Matching orange gradient button */
 .btn-primary {
-   background: linear-gradient(90deg, #4a90e2, #0077ff 60%, #6fb1fc);
+  background: linear-gradient(90deg, #ff9704, #ffa733, #ffbb66);
   color: white;
   padding: 9px 20px;
   border-radius: 8px;
@@ -96,7 +96,7 @@
 
 .btn-primary:hover {
   transform: scale(1.07);
-   background: linear-gradient(90deg, #6fb1fc, #0077ff, #4a90e2);
+  background: linear-gradient(90deg, #ffbb66, #ff9704, #ffa733); /* 🔸 Hover orange tone */
   box-shadow: 0 6px 18px rgba(0, 119, 255, 0.5);
 }
 

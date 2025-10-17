@@ -152,9 +152,12 @@
   inset: 0;
   z-index: -1;
   background-color: #ff9704; 
+  margin: 0 auto;
+  width: 90%;
   backdrop-filter: blur(1em);
   -webkit-backdrop-filter: blur(0.65625em);
   border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 60px;
   height: auto;
   
 }

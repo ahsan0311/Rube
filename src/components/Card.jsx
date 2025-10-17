@@ -12,7 +12,7 @@ const Card = ({ title, description, icon, btnText, path }) => {
       <div className="wave"></div>
 
       <div className="infotop">
-        <div className="icon">{icon}</div>
+        <div className="icon" style={{ color: "#ff9704" }}>{icon}</div>
         <div className="font-semibold text-lg mt-2">{title}</div>
         <div className="name max-w-2xl px-2 text-sm mt-2">{description}</div>
 

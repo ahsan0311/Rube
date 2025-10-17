@@ -36,7 +36,7 @@ const Home = () => {
       title: "MS Office",
       description:
         "Learn MS Office to simplify documentation and professional tasks.",
-      icon: <FaMicrosoft color="white" size={50} />,
+      icon: <FaMicrosoft color="#ff9704" size={50} />,
       path: "/ms-office",
       btnText: "Explore Course",
     },
@@ -44,7 +44,7 @@ const Home = () => {
       title: "Graphic Designing",
       description:
         "Master creative tools to design professional posters, banners, and logos.",
-      icon: <FaPaintBrush color="white" size={50} />,
+      icon: <FaPaintBrush color="#ff9704" size={50} />,
       path: "/graphic",
       btnText: "Explore Course",
     },
@@ -52,7 +52,7 @@ const Home = () => {
       title: "Digital Marketing",
       description:
         "Learn online marketing strategies to grow your or your clients' businesses.",
-      icon: <FaBullhorn color="white" size={50} />,
+      icon: <FaBullhorn color="#ff9704" size={50} />,
       path: "/digital-marketing-smartpro",
       btnText: "Explore Course",
     },
@@ -60,7 +60,7 @@ const Home = () => {
       title: "Shopify",
       description:
         "Understand Shopify and start your own dropshipping or eCommerce store.",
-      icon: <FaShopify color="white" size={50} />,
+      icon: <FaShopify color="#ff9704" size={50} />,
       path: "/shopify",
       btnText: "Explore Course",
     },
@@ -68,7 +68,7 @@ const Home = () => {
       title: "Daraz",
       description:
         "Learn how to set up your online store on Daraz and boost your sales.",
-      icon: <FaStore color="white" size={50} />,
+      icon: <FaStore color="#ff9704" size={50} />,
       path: "/daraz",
       btnText: "Explore Course",
     },
@@ -76,7 +76,7 @@ const Home = () => {
       title: "WordPress",
       description:
         "Build stunning websites and blogs with ease using WordPress.",
-      icon: <FaWordpress color="white" size={50} />,
+      icon: <FaWordpress color="#ff9704" size={50} />,
       path: "/wordpress",
       btnText: "Explore Course",
     },
@@ -84,7 +84,7 @@ const Home = () => {
       title: "Web Designing",
       description:
         "Learn to create modern, responsive, and user-friendly websites.",
-      icon: <FaLaptopCode color="white" size={50} />,
+      icon: <FaLaptopCode color="#ff9704" size={50} />,
       path: "/web-designing",
       btnText: "Explore Course",
     },
@@ -92,14 +92,14 @@ const Home = () => {
       title: "Video Editing",
       description:
         "Master video editing tools to create professional-grade videos.",
-      icon: <FaVideo color="white" size={50} />,
+      icon: <FaVideo color="#ff9704" size={50} />,
       path: "/video-editing",
       btnText: "Explore Course",
     },
     {
       title: "Ms Office & Graphics",
       description: "Master creative tools of MS Office & Graphic Designing.",
-      icon: <FaPaintBrush color="white" size={50} />,
+      icon: <FaPaintBrush color="#ff9704" size={50} />,
       path: "/ms-office-graphic",
       btnText: "Explore Course",
     },
@@ -107,7 +107,7 @@ const Home = () => {
       title: "Web Development",
       description:
         "Design dynamic websites and launch your own online store with ease.",
-      icon: <FaCode color="white" size={50} />,
+      icon: <FaCode color="#ff9704" size={50} />,
       path: "/web-development",
       btnText: "Explore Course",
     },
@@ -115,7 +115,7 @@ const Home = () => {
       title: "Computer Typing",
       description:
         "Master fast and accurate typing for office tasks and online work.",
-      icon: <FaKeyboard color="white" size={50} />,
+      icon: <FaKeyboard color="#ff9704" size={50} />,
       path: "/computer-typing",
       btnText: "Explore Course",
     },
@@ -123,7 +123,7 @@ const Home = () => {
       title: "English Language",
       description:
         "Gain confidence in spoken and written English for global success.",
-      icon: <FaLanguage color="white" size={50} />,
+      icon: <FaLanguage color="#ff9704" size={50} />,
       path: "/english-language",
       btnText: "Explore Course",
     },

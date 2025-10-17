@@ -10,7 +10,7 @@ import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
-    <footer className="bg-[#ff9704] text-white px-8 md:px-16 py-12 w-full">
+    <footer className="bg-[#ff9704] text-white px-8 md:px-16 py-4 w-full">
       <div className="max-w-[1300px] mx-auto">
         <img
           src="https://rubycommercialcentre.com/images/logoicon.png"
