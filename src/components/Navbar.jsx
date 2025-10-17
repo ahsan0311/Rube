@@ -104,6 +104,14 @@ export default function Navbar() {
     };
   }, []);
 
+  useEffect(() => {
+  if (isOpen) {
+    document.body.style.overflow = "hidden";
+  } else {
+    document.body.style.overflow = "auto";
+  }
+}, [isOpen]);
+
   return (
     <nav className="fixed top-0 w-full z-50 ">
       <div className="mx-auto p-2 flex items-center justify-around gap-20 px-10 nav-hd">
@@ -115,22 +123,22 @@ export default function Navbar() {
           />
         </div>
 
-        <div className="nav-desktop  items-center   justify-between w-[550px] max-[1000px]:w-[500px] h-[60px] relative">
+        <div className="nav-desktop font-bold items-center  justify-between w-[550px] max-[1000px]:w-[500px] h-[60px] relative">
           <Link
             to="/"
-            className="text-blue-400 hover:text-blue-500 text-[18px]"
+            className="text-blue-500 hover:text-blue-600 text-[18px]"
           >
             Home
           </Link>
           <Link
             to="/about"
-            className="text-blue-400 hover:text-blue-500 text-[18px]"
+            className="text-blue-500 hover:text-blue-600 text-[18px]"
           >
             About
           </Link>
 
           <div className="relative" ref={triggerRef} onClick={toggleDropdown}>
-            <div className="text-blue-400  hover:text-blue-500 flex items-center text-[18px] cursor-pointer">
+            <div className="text-blue-500  hover:text-blue-600 flex items-center text-[18px] cursor-pointer">
               Courses
               <svg
                 className="ml-1 w-4 h-4"
@@ -172,14 +180,14 @@ export default function Navbar() {
 
           <Link
             to="/carriers"
-            className="text-blue-400 hover:text-blue-500 text-[18px]"
+            className="text-blue-500 hover:text-blue-600 text-[18px]"
           >
             Carriers
           </Link>
 
           <Link
             to="/contact"
-            className="text-blue-400 hover:text-blue-500 text-[18px]"
+            className="text-blue-500 hover:text-blue-600 text-[18px]"
           >
             Contact Us
           </Link>
@@ -198,8 +206,9 @@ export default function Navbar() {
       </div>
 
       {isOpen &&
-        createPortal(
-          <div className="fixed inset-0 z-[9999] bg-[#ff9704] text-black w-[300px] h-full shadow-lg right-0">
+  createPortal(
+    <div className="fixed inset-0 z-[9999] bg-[#ff9704] text-black w-[300px] h-full shadow-lg right-0 overflow-y-auto">
+
             <div className="flex justify-between items-center p-4  border-b border-gray-700">
               <img
                 src="https://rubycommercialcentre.com/images/logoicon.png"

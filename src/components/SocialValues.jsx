@@ -35,7 +35,7 @@ const SocialValues = () => {
 
   return (
     <div className="social-values-section" ref={sectionRef}>
-      <h2 className="section-title">Our Social Values</h2>
+      <h2 className="section-title text-blue-500">Our Social Values</h2>
 
       <div className="values-grid">
         {stats.map((stat, index) => (

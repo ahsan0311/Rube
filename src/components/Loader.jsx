@@ -5,7 +5,6 @@ const Loader = ({ onFinish }) => {
   const [isVisible, setIsVisible] = useState(true);
 
   const handleFinish = () => {
-    // short fade-out
     setTimeout(() => {
       setIsVisible(false);
       if (onFinish) onFinish();
@@ -21,7 +20,6 @@ const Loader = ({ onFinish }) => {
           exit={{ opacity: 0 }}
           transition={{ duration: 0.8, ease: "easeOut" }}
         >
-          {/* Logo + Text */}
           <motion.div
             className="absolute flex flex-col items-center -translate-y-12"
             initial={{ opacity: 0, y: 40 }}
@@ -50,7 +48,6 @@ const TypingText = ({ text, delay = 0, onComplete }) => {
   const textRef = useRef(null);
   const [textWidth, setTextWidth] = useState(0);
 
-  // measure text width dynamically
   useEffect(() => {
     if (textRef.current) {
       const resizeObserver = new ResizeObserver(() => {
@@ -61,7 +58,6 @@ const TypingText = ({ text, delay = 0, onComplete }) => {
     }
   }, []);
 
-  // typing effect
   useEffect(() => {
     if (!text) return;
 
@@ -92,7 +88,6 @@ const TypingText = ({ text, delay = 0, onComplete }) => {
 
   return (
     <div className="flex flex-col items-center">
-      {/* The text */}
       <h1
         ref={textRef}
         className="text-3xl sm:text-4xl font-bold text-[#ff6600] tracking-wide"
@@ -106,7 +101,6 @@ const TypingText = ({ text, delay = 0, onComplete }) => {
         </motion.span>
       </h1>
 
-      {/* Dynamic underline that matches text width */}
       <motion.div
         className="h-[3px] bg-[#ff6600] rounded-full mt-3"
         initial={{ scaleX: 0 }}

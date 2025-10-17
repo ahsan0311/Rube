@@ -59,7 +59,7 @@ export default function CoreValuesSection() {
       <div className="absolute bottom-0 left-0 right-0 h-28 bg-orange-400 skew-y-[-6deg] origin-bottom-left z-0"></div>
 
       <div className="relative z-10">
-        <h2 className="text-3xl font-bold mb-4 text-gray-600">
+        <h2 className="text-3xl font-bold mb-4 text-blue-500">
           CORE <span className="text-blue-500">VALUES</span>
         </h2>
 
@@ -81,8 +81,7 @@ export default function CoreValuesSection() {
                 <h3
                   className="
                     text-xl font-semibold text-center mb-4 
-                    bg-gradient-to-r from-purple-500 via-pink-500 to-orange-400 
-                    bg-clip-text text-transparent
+                    text-[#ff9704] 
                   "
                 >
                   {title}
