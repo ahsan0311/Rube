@@ -143,32 +143,31 @@ export default function Navbar() {
               </svg>
             </div>
 
-           {isServicesVisible && (
-  <div
-    ref={dropdownRef}
-    className="services-dropdown absolute top-full left-0 mt-0 bg-white shadow-lg"
-    onClick={(e) => e.stopPropagation()}
-  >
-    <div className="tabs-container">
-      <div className="tab-content">
-        {currentServiceTab.content.map((section, idx) => (
-          <div className="tab-section" key={idx}>
-            <h3>
-              <Link
-                to={section.path}
-                className="dropdown-link text-blue-500 max-[1315px]:text-2xl"
-                onClick={() => setIsServicesVisible(false)}
+            {isServicesVisible && (
+              <div
+                ref={dropdownRef}
+                className="services-dropdown absolute top-full left-0 mt-0 bg-white shadow-lg"
+                onClick={(e) => e.stopPropagation()}
               >
-                {section.title}
-              </Link>
-            </h3>
-          </div>
-        ))}
-      </div>
-    </div>
-  </div>
-)}
-
+                <div className="tabs-container">
+                  <div className="tab-content">
+                    {currentServiceTab.content.map((section, idx) => (
+                      <div className="tab-section" key={idx}>
+                        <h3>
+                          <Link
+                            to={section.path}
+                            className="dropdown-link text-blue-500 max-[1315px]:text-2xl"
+                            onClick={() => setIsServicesVisible(false)}
+                          >
+                            {section.title}
+                          </Link>
+                        </h3>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              </div>
+            )}
           </div>
 
           <Link

@@ -1,10 +1,9 @@
+import React, { Suspense, useState } from "react";
 import { Routes, Route } from "react-router-dom";
-import React, { Suspense, useState, useEffect } from "react";
 import Loader from "../components/Loader";
 import ScrollToTop from "../components/ScrollToTop";
 
-
-
+// Lazy imports
 const Home = React.lazy(() => import("../pages/home/home"));
 const About = React.lazy(() => import("../pages/about/about"));
 const Contact = React.lazy(() => import("../pages/contact/contact"));
@@ -25,18 +24,12 @@ const AutoCard = React.lazy(() => import("../pages/courses/autocad"));
 const ThreeDMax = React.lazy(() => import("../pages/courses/3dMax"));
 const Mern = React.lazy(() => import("../pages/courses/Mern"));
 
-
-
 const AppRoutes = () => {
   const [loading, setLoading] = useState(true);
 
-  useEffect(() => {
-    setLoading(true);
-    const timer = setTimeout(() => setLoading(false), 2500);
-    return () => clearTimeout(timer);
-  }, []);
+  const handleLoaderFinish = () => setLoading(false);
 
-  if (loading) return <Loader />;
+  if (loading) return <Loader onFinish={handleLoaderFinish} />;
 
   return (
     <Suspense fallback={<Loader />}>
@@ -47,18 +40,14 @@ const AppRoutes = () => {
         <Route path="/contact" element={<Contact />} />
         <Route path="/carriers" element={<Carriers />} />
 
-
-
-
-        {/* course */}
-
+        {/* Courses */}
         <Route path="/ms-office" element={<MsOffice />} />
         <Route path="/ms-office-graphic" element={<Office_graphic />} />
         <Route path="/graphic" element={<Graphic />} />
         <Route path="/digital-marketing-smartpro" element={<DigitialMarketing />} />
         <Route path="/daraz" element={<Daraz />} />
-        <Route path="/shopify" element={<Shopify />} />   
-         <Route path="/web-designing" element={<WebDesign />} /> 
+        <Route path="/shopify" element={<Shopify />} />
+        <Route path="/web-designing" element={<WebDesign />} />
         <Route path="/web-development" element={<WebDevelopment />} />
         <Route path="/wordpress" element={<WordPress />} />
         <Route path="/video-editing" element={<VideoEditing />} />
@@ -67,21 +56,6 @@ const AppRoutes = () => {
         <Route path="/autocad" element={<AutoCard />} />
         <Route path="/3d-max" element={<ThreeDMax />} />
         <Route path="/mern-stack" element={<Mern />} />
-
-
-
-
-
-        
-
-
-
-
-
-
-       
-       
-
       </Routes>
     </Suspense>
   );
