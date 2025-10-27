@@ -323,7 +323,7 @@ const Contact = () => {
       });
 
       // ✅ Replace this with YOUR own Formspree endpoint
-      const response = await fetch("https://formspree.io/f/mqageaoo", {
+      const response = await fetch("https://formspree.io/f/xyzbkzvr", {
         method: "POST",
         body: formDataToSend,
         headers: { Accept: "application/json" },

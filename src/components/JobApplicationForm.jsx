@@ -432,7 +432,7 @@ const JobApplicationForm = () => {
       });
 
       // ✅ Replace with your own Formspree endpoint
-      const response = await fetch("https://formspree.io/f/mqageaoo", {
+      const response = await fetch("https://formspree.io/f/xyzbkzvr", {
         method: "POST",
         body: formDataToSend,
         headers: {
