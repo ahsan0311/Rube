@@ -127,6 +127,30 @@ const Home = () => {
       path: "/english-language",
       btnText: "Explore Course",
     },
+    {
+      title: "MERN Stack Development",
+      description:
+        "Become a full-stack developer by mastering the MERN stack technologies.",
+      icon: <FaLaptopCode color="#ff9704" size={50} />,
+      path: "/mern-stack",
+      btnText: "Explore Course",
+    },
+    {
+      title: "3Ds Max",
+      description:
+        "Learn 3Ds Max for 3D modeling, animation, and rendering in various industries.",
+      icon: <FaPaintBrush color="#ff9704" size={50} />,
+      path : "/3d-max",
+      btnText: "Explore Course",
+    },
+    {
+      title: "AutoCAD",
+      description:
+        "Master AutoCAD for precise 2D and 3D design and drafting in engineering and architecture.",
+      icon: <FaPaintBrush color="#ff9704" size={50} />,
+      path : "/autocad",
+      btnText: "Explore Course",
+    }
   ];
 
 

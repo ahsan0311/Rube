@@ -3,12 +3,25 @@ import {
   FaFacebookF,
   FaInstagram,
   FaLinkedinIn,
-  FaTiktok,
   FaTwitter,
+  FaTiktok,
+  FaYoutube,
+  FaPinterestP,
 } from "react-icons/fa";
 import { Link } from "react-router-dom";
 
 const Footer = () => {
+
+  const icons = [
+    { icon: <FaFacebookF />, link: "https://facebook.com/" },
+    { icon: <FaInstagram />, link: "https://instagram.com/" },
+    { icon: <FaLinkedinIn />, link: "https://linkedin.com/" },
+    { icon: <FaYoutube />, link: "https://youtube.com/" },
+    { icon: <FaTiktok />, link: "https://www.tiktok.com/@rubycommercialcentre" },
+    { icon: <FaTwitter />, link: "https://twitter.com/" },
+    { icon: <FaPinterestP />, link: "https://pinterest.com/" },
+  ];
+
   return (
     <footer className="bg-[#ff9704] text-white px-8 md:px-16 py-4 w-full">
       <div className="max-w-[1300px] mx-auto">
@@ -73,23 +86,19 @@ const Footer = () => {
             </h3>
           </div>
 
-          <div className="flex gap-3  max-[768px]:mb-[10px]">
-            <div className="w-10 h-10 bg-blue-500 rounded-full flex items-center justify-center text-white text-lg hover:scale-105 cursor-pointer transition">
-              <FaInstagram />
-            </div>
-            <div className="w-10 h-10 bg-blue-500 rounded-full flex items-center justify-center text-white text-lg hover:scale-105 cursor-pointer transition">
-              <FaFacebookF />
-            </div>
-            <div className="w-10 h-10 bg-blue-500 rounded-full flex items-center justify-center text-white text-lg hover:scale-105 cursor-pointer transition">
-              <FaLinkedinIn />
-            </div>
-            <div className="w-10 h-10 bg-blue-500 rounded-full flex items-center justify-center text-white text-lg hover:scale-105 cursor-pointer transition">
-              <FaTwitter />
-            </div>
-            <div className="w-10 h-10 bg-blue-500 rounded-full flex items-center justify-center text-white text-lg hover:scale-105 cursor-pointer transition">
-              <FaTiktok />
-            </div>
-          </div>
+         <div className="flex gap-3 max-[768px]:mb-[10px]">
+      {icons.map((item, index) => (
+        <a
+          key={index}
+          href={item.link}
+          target="_blank"
+          rel="noopener noreferrer"
+          className=" flex items-center justify-center text-white text-lg hover:scale-105 hover:text-red-500 transition cursor-pointer"
+        >
+          {item.icon}
+        </a>
+      ))}
+    </div>
         </div>
       </div>
     </footer>

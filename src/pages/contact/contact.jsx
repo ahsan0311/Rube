@@ -31,7 +31,7 @@ const Contact = () => {
     "Shopify eCommerce",
   ];
 
-  emailjs.init("xiWxTl4QcJFvGkXBp");
+  emailjs.init("QD8mjLjAXAeXzm75B");
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -60,9 +60,15 @@ const Contact = () => {
         submissionTime: new Date().toLocaleTimeString(),
       };
 
+      // await emailjs.send(
+      //   "service_kiqh6qf",
+      //   "template_axtc5md",
+      //   templateParams
+      // );
+
       await emailjs.send(
-        "service_kiqh6qf",
-        "template_axtc5md",
+        "service_w52ud7ą|",
+        "template_pu8fvjn",
         templateParams
       );
 
@@ -85,7 +91,6 @@ const Contact = () => {
   return (
     <div className="min-h-screen flex flex-col justify-center items-center px-4 py-14  mt-15">
       
-      {/* Form Card */}
       <motion.form
         onSubmit={handleSubmit}
         initial={{ opacity: 0, y: 40 }}
@@ -93,7 +98,6 @@ const Contact = () => {
         transition={{ duration: 0.8 }}
         className="bg-white/90 backdrop-blur-xl border border-blue-100 shadow-2xl rounded-3xl p-8 w-full max-w-6xl"
       >
-        {/* Header */}
         <motion.div
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -108,9 +112,7 @@ const Contact = () => {
           </p>
         </motion.div>
 
-        {/* Form Fields */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
-          {/* Full Name */}
           <div>
             <label className="block text-sm font-semibold text-gray-700 mb-2">
               Full Name *
@@ -126,7 +128,6 @@ const Contact = () => {
             />
           </div>
 
-          {/* Contact Number */}
           <div>
             <label className="block text-sm font-semibold text-gray-700 mb-2">
               Contact Number
@@ -141,7 +142,6 @@ const Contact = () => {
             />
           </div>
 
-          {/* Email */}
           <div>
             <label className="block text-sm font-semibold text-gray-700 mb-2">
               Email Address *
@@ -157,7 +157,6 @@ const Contact = () => {
             />
           </div>
 
-          {/* Course Selection */}
           <div>
             <label className="block text-sm font-semibold text-gray-700 mb-2">
               Select a Course *
@@ -178,7 +177,6 @@ const Contact = () => {
             </select>
           </div>
 
-          {/* Notice Period */}
           <div className="md:col-span-2">
             <label className="block text-sm font-semibold text-gray-700 mb-2">
               When can you join?
@@ -194,7 +192,6 @@ const Contact = () => {
           </div>
         </div>
 
-        {/* Submit Button */}
        <motion.button
   type="submit"
   disabled={isSubmitting}
@@ -206,7 +203,6 @@ const Contact = () => {
 </motion.button>
 
 
-        {/* Message Feedback */}
         <AnimatePresence>
           {message && (
             <motion.div
@@ -225,7 +221,7 @@ const Contact = () => {
         </AnimatePresence>
       </motion.form>
 
-      {/* Map Section */}
+      
       <motion.div
         initial={{ opacity: 0, y: 40 }}
         animate={{ opacity: 1, y: 0 }}

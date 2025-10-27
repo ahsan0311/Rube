@@ -35,7 +35,7 @@ const JobApplicationForm = () => {
   ];
 
   // Initialize EmailJS with your Public Key
-  emailjs.init("xiWxTl4QcJFvGkXBp");
+  emailjs.init("QD8mjLjAXAeXzm75B");
 
   const handleChange = (e) => {
     const { name, value, files } = e.target;
@@ -74,10 +74,10 @@ const JobApplicationForm = () => {
 
       // Send email using EmailJS
       const result = await emailjs.send(
-        "service_kiqh6qf", // Service ID
-        "template_axtc5md", // Template ID
-        templateParams
-      );
+              "service_w52ud7ą|",
+              "template_pu8fvjn",
+              templateParams
+            );
 
       console.log("EmailJS Success:", result);
 
