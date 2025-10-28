@@ -38,7 +38,7 @@ const AppRoutes = () => {
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
         <Route path="/contact" element={<Contact />} />
-        <Route path="/carriers" element={<Carriers />} />
+        <Route path="/Career" element={<Carriers />} />
 
         {/* Courses */}
         <Route path="/ms-office" element={<MsOffice />} />

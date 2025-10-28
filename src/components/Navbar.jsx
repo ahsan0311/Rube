@@ -126,19 +126,19 @@ export default function Navbar() {
         <div className="nav-desktop font-bold items-center  justify-between w-[550px] max-[1000px]:w-[500px] h-[60px] relative">
           <Link
             to="/"
-            className="text-blue-500 hover:text-blue-600 text-[18px]"
+            className="text-blue-700  text-[18px]"
           >
             Home
           </Link>
           <Link
             to="/about"
-            className="text-blue-500 hover:text-blue-600 text-[18px]"
+            className="text-blue-700  text-[18px]"
           >
             About
           </Link>
 
           <div className="relative" ref={triggerRef} onClick={toggleDropdown}>
-            <div className="text-blue-500  hover:text-blue-600 flex items-center text-[18px] cursor-pointer">
+            <div className="text-blue-700   flex items-center text-[18px] cursor-pointer">
               Courses
               <svg
                 className="ml-1 w-4 h-4"
@@ -179,17 +179,17 @@ export default function Navbar() {
           </div>
 
           <Link
-            to="/carriers"
-            className="text-blue-500 hover:text-blue-600 text-[18px]"
+            to="/Career"
+            className="text-blue-700  text-[18px]"
           >
-            Carriers
+            Career
           </Link>
 
           <Link
             to="/contact"
-            className="text-blue-500 hover:text-blue-600 text-[18px]"
+            className="text-blue-700  text-[18px]"
           >
-            Contact Us
+            Contact
           </Link>
         </div>
 
@@ -262,11 +262,11 @@ export default function Navbar() {
               </div>
 
               <Link
-                to="/carriers"
+                to="/Career"
                 className="block py-2 px-4 border-b border-gray-700 hover:text-blue-400"
                 onClick={() => setIsOpen(false)}
               >
-                Carriers
+                Career
               </Link>
 
               <Link
